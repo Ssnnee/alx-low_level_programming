@@ -1,21 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-
+* main - Print all single digit numbers
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-    int i;
+	int number;
 
-    for (i = 0; i < 10; i++)
-    {
-        printf("%d", i);
-    }
+	for (number = 0; number < 10; number++)
+	printf("%i", number);
+	putchar('\n');
 
-    putchar('\n');
-
-    return 0;
+	return (0);
 }
