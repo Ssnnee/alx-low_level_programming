@@ -2,7 +2,6 @@
 
 /**
  * _islower - Checks for alphebetic character by showing 1 if true otherwise 0.
- *
  * @c: The character in ASCII code
  *
  * Return: Return 1 if true otherwise 0.
