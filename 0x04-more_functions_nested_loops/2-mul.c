@@ -4,12 +4,12 @@
 * mul - function that multiplies two integers
 * @a: First integer
 * @b: Second integer
-* Return: mul.
+* Return: x.
 */
 int mul(int a, int b)
 {
-	int x;
+int x;
 
-	x = a * b;
+x = a * b;
 return(x);
 }
