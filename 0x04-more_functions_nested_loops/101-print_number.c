@@ -8,29 +8,23 @@
 */
 void print_number(int n)
 {
-	int copy, nth, size = 1, ones = n % 10;
+	int digit = n;
 
-	n /= 10;
-	copy = n;
-
-	if (ones < 0)
+	if (n < 0)
 	{
-		ones *= -1, copy *= -1, n *= -1;
 		_putchar('-');
+		digit = -digit;
 	}
-	if (copy > 0)
+
+	int divisor = 1;
+
+	while (digit / divisor > 9)
+		divisor *=10;
+
+	while (divisor != 0)
 	{
-		while (copy / 10 != 0)
-		{
-			copy /= 10, size *= 10;
-		}
-		while (size > 0)
-		{
-			nth = n / size;
-			_putchar('0' + nth);
-			n -= nth * size;
-			size /= 10;
-		}
+		_putchar((digit / divisor) + '0');
+		digit %= divisor;
+		divisor /= 10;
 	}
-	_putchar('0' + ones);
 }
