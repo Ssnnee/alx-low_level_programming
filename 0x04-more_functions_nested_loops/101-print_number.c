@@ -18,7 +18,7 @@ void print_number(int n)
 
 	int divisor = 1;
 
-	while (digit / divisor > 9)
+	while ((digit / divisor) > 9)
 		divisor *=10;
 
 	while (divisor != 0)
