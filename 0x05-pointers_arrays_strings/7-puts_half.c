@@ -1,6 +1,6 @@
 #include "main.h"
-#include <string.h>  // for strlen()
-#include <stddef.h>  // for size_t
+#include <string.h>
+#include <stddef.h>
 /**
  * puts_half - prints the second half of a string
  * @str: input string
