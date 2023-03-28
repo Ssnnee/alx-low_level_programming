@@ -12,9 +12,6 @@ int _atoi(char *s)
 	int num = 0;
 	int i = 0;
 
-	if (s == NULL || *s == '\0')
-		return 0;
-
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
@@ -25,6 +22,8 @@ int _atoi(char *s)
 			if (!(s[i + 1] >= '0' && s[i + 1] <= '9'))
 				break;
 		}
+		else if (num > 0)
+			break;
 		i++;
 	}
 	return (num * sign);
