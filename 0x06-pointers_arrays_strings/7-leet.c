@@ -6,22 +6,22 @@
  *
  * Return: pointer to the encoded string
  */
-char *leet(char *n)
+char *leet(char *str)
 {
 	int i, j;
-	const char s1[] = "aAeEoOtTlL";
-	const char s2[] = "4433007711";
+	char *leet_chars = "aAeEoOtTlL";
+	char *leet_codes = "4433007711";
 
-	for (i = 0; n[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; j < sizeof(s1); j++)
+		for (j = 0; leet_chars[j] != '\0'; j++)
 		{
-			if (n[i] == s1[j])
+			if (str[i] == leet_chars[j])
 			{
-				n[i] = s2[j];
-				break;
+				str[i] = leet_codes[j];
+				break; /* exit inner loop once a match is found */
 			}
 		}
 	}
-	return (n);
+	return (str);
 }
