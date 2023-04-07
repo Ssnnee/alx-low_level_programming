@@ -7,7 +7,7 @@
  *
  * Return: 0 if successful
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
 	int num;
 
