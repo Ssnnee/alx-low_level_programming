@@ -12,6 +12,7 @@
 int is_number(char *str)
 {
 	int i = 0;
+
 	for (; str[i]; i++)
 	{
 		if (!isdigit(str[i]))
@@ -26,9 +27,10 @@ int is_number(char *str)
  *
  * Return: 0 if successful, 1 otherwise
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int sum, i, num;
+
 	sum = 0;
 	i = 1;
 	num = argc - 1;

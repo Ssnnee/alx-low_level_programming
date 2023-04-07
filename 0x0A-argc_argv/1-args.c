@@ -7,9 +7,10 @@
  *
  * Return: 0 if successful
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int num;
+
 	num = argc - 1;
 
 	printf("%d\n", num);

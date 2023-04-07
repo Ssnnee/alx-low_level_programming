@@ -8,9 +8,10 @@
  *
  * Return: 0 if successful, 1 otherwise
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int sum, i, num;
+
 	sum = 1;
 	i = 1;
 	num = argc - 1;
