@@ -1,2 +1,3 @@
 #!/bin/bash
-gcc -c *.c ar rcs libmy.a
+gcc -c *.c
+ar rcs libmy.a
