@@ -76,7 +76,8 @@ void print_all(const char * const format, ...)
 
 	va_start(arg, format);
 
-	i = 0, sep = "";
+	i = 0;
+	sep = "";
 
 	while (format != NULL && format[i] != '\0')
 	{
@@ -89,7 +90,7 @@ void print_all(const char * const format, ...)
 				f_array[j].f(arg, sep);
 				sep = ", ";
 			}
-			j++
+			j++;
 		}
 	}
 	printf("\n");
