@@ -2,13 +2,13 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 /**
- * print_strings - prints strings followed by a new line
+ * print_numbers - prints numbers, followed by a new line
  * @separator: seperators
  * @n: number of arguements
  *
  * Return: void
  */
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list num;
 	unsigned int i;
