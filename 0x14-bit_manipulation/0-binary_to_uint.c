@@ -10,7 +10,9 @@
  */
 unsigned int _stoi(char c)
 {
-	return ((unsigned int) c - '0');
+	unsigned int  result;
+	result = (unsigned int) c - '0';
+	return (result);
 }
 
 /**
