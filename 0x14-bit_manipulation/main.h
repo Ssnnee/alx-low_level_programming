@@ -1,8 +1,6 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-unsigned int _strlen(const char *s);
-unsigned int _stoi(char c);
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
