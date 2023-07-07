@@ -1,10 +1,26 @@
-
-int main()
+#include <stdio.h>
+#include <unistd.h>
+#include "main.h"
+/**
+ * binary_to_uint - converts a binary number to an unsigned int.
+ *
+ * @b: string to convert
+ * Return: unsigned decimal number
+ */
+unsigned int binary_to_uint(const char *b)
 {
-	int a = 4, b = 3;
-	a = a ^ b;
-	b = a ^ b;
-	a = a ^ b;
-	printf("After XOR a = %d and b = %d", a, b);
-	return 0;
+	int i;
+	unsigned int res;
+
+	if (!b)
+		return (0);
+	i = 0, res = 0;
+	while (b[i])
+	{
+		if (b[i] != '1' && b[i] != '0')
+			return (0);
+		res = res * 2 + (b[i] - '0');
+		i++;
+	}
+	return (res);
 }
