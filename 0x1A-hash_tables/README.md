@@ -4,7 +4,7 @@
 
 This directory is dedicated to hasing functions. And we'll use C implementation it hash tables with C.
 
-**Topics : ** `C` `Algorithm` `Data structure`
+**Topics :** `C` `Algorithm` `Data structure`
 
 ### Files 
 
