@@ -5,7 +5,7 @@
  * @key: The key
  * @value: The value associated with the key
  *
- * Returns: 1 if it succeeded, 0 otherwise
+ * Return: 1 if it succeeded, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -13,11 +13,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node_to_insert;
 	hash_node_t *current_node_collision;
 
+	if (ht == NULL)
+		return (0);
 	if (key == NULL || *key == '\0')
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-
 	node_to_insert = malloc(sizeof(hash_node_t));
 	if (node_to_insert == NULL)
 		return (0);
@@ -44,9 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		} current_node_collision = current_node_collision->next;
 	}
 
-	/* Key doesn't exist, insert the node */
 	node_to_insert->next = ht->array[index];
 	ht->array[index] = node_to_insert;
-
 	return (1);
 }
