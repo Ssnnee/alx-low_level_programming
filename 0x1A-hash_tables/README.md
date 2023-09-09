@@ -43,7 +43,7 @@ unsigned long hash_function(char* str)
 In conclusion, a hash function is a critical tool in computing, used for efficient data retrieval, data integrity verification, encryption, and data security.
 
 **What is a hash table, how do they work and how to use them**
-A hash table, also known as a hash map, is a data structure that associates keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
+A [hash table](https://en.wikipedia.org/wiki/Hash_table), also known as a hash map, is a data structure that associates keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
 Hash tables work by storing data in an array format, where each data value has its own unique index value.
 To use a hash table, you first need to generate a hash of the key using a hash function. This hash is then used to find an index in the hash table where the value should be stored. If two keys result in the same hash (a collision), the hash table needs to have a strategy to handle it.
 
