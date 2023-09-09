@@ -45,7 +45,3 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 file_name.c
 
 ## Acknowledgements
 All work contained in this repository was completed as part of the curriculum for the ALX Software Engineering Program. ALX Africa is an online full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit [this link](https://www.alxafrica.com).
-
-## Note :-)
-**Python Dictionaries**
-Python dictionaries are implemented using hash tables.
