@@ -11,6 +11,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *node_to_insert;
+	hash_node_t *current_node_collision;
 
 	if (key == NULL || *key == '\0')
 		return (0);
@@ -20,7 +21,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	node_to_insert = malloc(sizeof(hash_node_t));
 	if (node_to_insert == NULL)
 		return (0);
-
 	node_to_insert->key = strdup(key);
 	node_to_insert->value = strdup(value);
 	if (node_to_insert->key == NULL || node_to_insert->value == NULL)
@@ -30,10 +30,22 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	/* Handle collision */
-	if (ht->array[index] != NULL)
-		node_to_insert->next = ht->array[index];
+	current_node_collision = ht->array[index];
+	while (current_node_collision != NULL)
+	{
+		if (strcmp(current_node_collision->key, key) == 0)
+		{
+			free(current_node_collision->value);
+			current_node_collision->value = strdup(value);
+			free(node_to_insert->key);
+			free(node_to_insert->value);
+			free(node_to_insert);
+			return (1);
+		} current_node_collision = current_node_collision->next;
+	}
 
-	/* Insert the node */
+	/* Key doesn't exist, insert the node */
+	node_to_insert->next = ht->array[index];
 	ht->array[index] = node_to_insert;
 
 	return (1);
