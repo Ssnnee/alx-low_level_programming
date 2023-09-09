@@ -4,10 +4,11 @@
 
 This directory is dedicated to hasing functions. And we'll use C implementation it hash tables with C.
 
-**What is a hash function ?**
+#### What is a hash function ?
 A [hash](https://intranet.alxswe.com/rltoken/ZKpRI_FxOxAz80Onpfy0Ew) function is a function that associates data of arbitrary size with values of fixed size.
 The values returned by a hash function (called hash values, hash codes, hashes) are generally used to index a fixed-size table called a hash table.
 Here is an example of a simple hash function in C:
+
 ```
 /**
  * hash_function - Computes a hash for a given string
@@ -40,9 +41,11 @@ unsigned long hash_function(char* str)
 }
 ```
 
+
 In conclusion, a hash function is a critical tool in computing, used for efficient data retrieval, data integrity verification, encryption, and data security.
 
-**What is a hash table, how do they work and how to use them**
+#### What is a hash table, how do they work and how to use the
+
 A [hash table](https://en.wikipedia.org/wiki/Hash_table), also known as a hash map, is a data structure that associates keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
 Hash tables work by storing data in an array format, where each data value has its own unique index value.
 To use a hash table, you first need to generate a hash of the key using a hash function. This hash is then used to find an index in the hash table where the value should be stored. If two keys result in the same hash (a collision), the hash table needs to have a strategy to handle it.
