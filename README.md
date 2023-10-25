@@ -34,7 +34,8 @@ The directory structure is as follows:
 + ├── 0x17-doubly_linked_lists 
 + ├── 0x18-dynamic_libraries
 + ├── 0x1A-hash_tables
-+ ├── 
++ ├── 0x1C-makefiles
++ ├──
 
 ## Installation and Usage
 To use the code in this repository, you need to have gcc installed on your machine or any C compiler.
