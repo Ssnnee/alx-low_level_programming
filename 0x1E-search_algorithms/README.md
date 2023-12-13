@@ -33,6 +33,9 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 test_main.c file_name.c -o output
 | 4-O   |  the time complexity (worst case) of a binary search in an array of size n     |
 | 5-O   |  the space complexity (worst case) of a binary search in an array of size n     |
 | 6-O   |  the space complexity of this function / algorithm provided by ALX     |
+| 100-jump.c   |  searches for a value in a sorted array of integers using the Jump search algorithm     |
+| 101-O   |   the time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)     |
+| 102-interpolation.c   |  searches for a value in a sorted array of integers using the Interpolation search algorithm    |
 
 
 Bellow is the function of the file 6-0
